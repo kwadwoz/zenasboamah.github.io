@@ -8,6 +8,16 @@ You can also browse my <a href="https://scholar.google.co.in/citations?user=Z-7p
 
 **2024**
 
+- **Faster Speech-LLaMA inference with multi-token prediction**  
+  **Desh Raj**, Gil Keren, Junteng Jia, Jay Mahadeokar, Ozlem Kalinli  
+  *Submitted to IEEE ICASSP 2025*  
+  [Paper](https://arxiv.org/abs/2409.08148){: .btn} 
+
+- **M-BEST-RQ: A multi-channel speech foundation model for smart glasses**  
+  Yufeng Yang, **Desh Raj**, Ju Lin, Niko Moritz, Junteng Jia, Gil Keren, Egor Lakomkin, Yiteng Huang, Jacob Donley, Jay Mahadeokar, Ozlem Kalinli  
+  *Submitted to IEEE ICASSP 2025*  
+  [Paper](https://arxiv.org/abs/2409.11494){: .btn} 
+
 - **ConEC: Earnings Call Dataset with Real-world Contexts for Benchmarking Contextual Speech Recognition**  
   Ruizhe Huang, Mahsa Yarmohammadi, Jan Trmal, Jing Liu, **Desh Raj**, Leibny Paola Garcia, Alexei V Ivanov, Patrick Ehlen, Mingzhi Yu, Dan Povey, Sanjeev Khudanpur  
   *LREC 2024*  
