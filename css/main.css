@@ -1,14 +1,23 @@
-@import url(autumn.css);
+@import url(grey.css);
 @import url("pygment_highlights.css");
+
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #404040;
+  --link-color: #0085a1;
+  --link-hover-color: #0085a1;
+  --main-color: #0085a1;
+  --secondary-color: #eaeaea;
+}
 
 /* --- General --- */
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
-  color: #404040;
+  color: var(--text-color);
   position: relative;
-  background: #FFF;
+  background: var(--background-color);
 }
 p {
   line-height: 1.5;
@@ -16,18 +25,18 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: var(--link-color);
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 a {
-  color: #008AFF;
+  color: var(--link-color);
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: var(--link-hover-color);
 }
 li.spaced{
   margin: 10px 0;
@@ -101,8 +110,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--secondary-color);
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -115,14 +124,14 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #404040;
+  color: var(--text-color);
 }
 
 .navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus ,
+.navbar-custom .navbar-brand:focus,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: var(--main-color);
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -261,14 +270,15 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
-  border-top: 1px #EAEAEA solid;
+  background: var(--background-color);
+  border-top: 1px var(--secondary-color) solid;
   margin-top: 50px;
   font-size: 14px;
+  color: var(--text-color);
 }
 
 footer a {
-  color: #404040;
+  color: var(--text-color);
 }
 
 footer .list-inline {
@@ -426,9 +436,11 @@ footer .theme-by {
 .intro-header {
   margin: 80px 0 20px;
   position: relative;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 .intro-header.big-img {
-  background: no-repeat center center;
+  background: var(--background-color) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
