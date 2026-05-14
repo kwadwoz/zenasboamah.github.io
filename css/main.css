@@ -2,12 +2,12 @@
 @import url("pygment_highlights.css");
 
 :root {
-  --background-color: #f5f5f5;
-  --text-color: #404040;
-  --link-color: #0085a1;
-  --link-hover-color: #0085a1;
-  --main-color: #0085a1;
-  --secondary-color: #eaeaea;
+  --background-color: #080c08;
+  --text-color: #f0f0f0;
+  --link-color: #00e538;
+  --link-hover-color: #ffffff;
+  --main-color: #00ff41;
+  --secondary-color: #1a2e1a;
 }
 
 /* --- General --- */
@@ -17,7 +17,7 @@ body {
   font-size: 18px;
   color: var(--text-color);
   position: relative;
-  background: var(--background-color);
+  background-color: var(--background-color);
 }
 p {
   line-height: 1.5;

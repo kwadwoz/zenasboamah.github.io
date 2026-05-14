@@ -1,10 +1,92 @@
 /* Chip / PCB Theme — Matrix Green */
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* --- 3D Chip container --- */
+#chip-3d {
+  width: 100%;
+  height: 280px;
+  cursor: crosshair;
+  margin: 24px 0 0;
+  position: relative;
+  border: 1px solid rgba(0, 255, 65, 0);
+  animation: chipPulse 2.4s ease-in-out infinite;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+#chip-3d.explored {
+  animation: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+@keyframes chipPulse {
+  0%, 100% { border-color: rgba(0,255,65,0.08); box-shadow: 0 0 0 transparent; }
+  50%       { border-color: rgba(0,255,65,0.28); box-shadow: 0 0 18px rgba(0,255,65,0.12); }
+}
+#chip-3d canvas { display: block; }
+
+/* Click-to-explore hint badge */
+#chip-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #00ff41;
+  text-shadow: 0 0 8px rgba(0,255,65,0.6);
+  pointer-events: none;
+  animation: hintBlink 1.4s ease-in-out infinite;
+  transition: opacity 0.5s;
+  white-space: nowrap;
+}
+#chip-hint.hidden { opacity: 0; }
+@keyframes hintBlink {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
+.chip-label {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff41;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin: 4px 0 20px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* --- Register Allocator section --- */
+.reg-section {
+  margin: 30px 0 0;
+}
+.reg-section-title {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--main-color);
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin: 0 0 6px;
+  text-shadow: 0 0 10px rgba(0,255,65,0.3);
+}
+.reg-section-title::before { content: '// '; opacity: 0.5; }
+.reg-section-desc {
+  font-family: 'Share Tech Mono', monospace;
+  color: #d8eed8;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+#regalloc-3d {
+  width: 100%;
+  height: 260px;
+  background: transparent;
+  margin-bottom: 4px;
+}
+#regalloc-3d canvas { display: block; }
 
 :root {
   --main-color: #00ff41;
   --secondary-color: #1a2e1a;
-  --text-color: #b0e8b0;
+  --text-color: #f0f0f0;
   --background-color: #080c08;
   --link-color: #00e538;
   --link-hover-color: #ffffff;
@@ -117,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-subheading,
 .post-subheading {
-  color: #7ec87e;
+  color: #c8f0c8;
   font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 
@@ -167,7 +249,7 @@ footer a:hover {
 
 /* Italic text (dates) */
 i, em {
-  color: #5ecb5e;
+  color: #c8ecc8;
 }
 
 /* Bold text */
@@ -182,4 +264,57 @@ ul[style*="overflow"] {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 255, 65, 0.1);
   background: rgba(0, 255, 65, 0.02);
   padding: 10px;
+}
+
+/* ── Chip die info panel ────────────────────────── */
+#chip-info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  background: rgba(4, 12, 4, 0.97);
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  padding: 14px 20px 16px;
+  margin: 0 0 16px;
+  border-radius: 2px;
+}
+#chip-info .bi-name {
+  color: var(--main-color);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0 0 6px;
+}
+#chip-info .bi-name::before {
+  content: '> BLOCK: ';
+  opacity: 0.55;
+}
+#chip-info .bi-hr {
+  border: none;
+  border-top: 1px solid rgba(0, 255, 65, 0.25) !important;
+  margin: 6px 0 10px !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+#chip-info .bi-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #e8f5e8;
+  margin: 0 0 10px;
+}
+#chip-info .bi-link {
+  color: var(--main-color);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+#chip-info .bi-link::before { content: '→ '; }
+#chip-info .bi-link:hover { text-shadow: 0 0 8px rgba(0, 255, 65, 0.8); }
+#chip-info .bi-hint {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: rgba(0, 255, 65, 0.3);
+  letter-spacing: 1px;
 }
