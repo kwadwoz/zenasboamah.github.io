@@ -1,0 +1,185 @@
+/* Chip / PCB Theme — Matrix Green */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --main-color: #00ff41;
+  --secondary-color: #1a2e1a;
+  --text-color: #b0e8b0;
+  --background-color: #080c08;
+  --link-color: #00e538;
+  --link-hover-color: #ffffff;
+  --glow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+/* PCB grid background with solder-pad dots at intersections */
+body {
+  color: var(--text-color);
+  background-color: #080c08;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0, 255, 65, 0.18) 1px, transparent 0),
+    linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
+  background-size: 30px 30px, 30px 30px, 30px 30px;
+}
+
+/* Subtle CRT scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+  text-shadow: var(--glow);
+}
+
+/* Headings in monospace for that chip/terminal feel */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+  color: var(--main-color);
+}
+
+/* Navbar */
+.navbar-custom {
+  background: rgba(8, 12, 8, 0.97) !important;
+  border-bottom: 1px solid var(--main-color) !important;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.25);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav li a {
+  color: var(--main-color) !important;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+  color: #ffffff !important;
+  text-shadow: var(--glow);
+}
+
+/* Mobile nav toggle bars */
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: var(--main-color);
+}
+
+/* Dropdown nav children */
+.navbar-custom .nav .navlinks-container .navlinks-children a {
+  background: #080c08;
+  border-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+/* Avatar — circuit board glow */
+.navbar-custom .avatar-container .avatar-img-border {
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.7) !important;
+  border: 2px solid var(--main-color) !important;
+}
+
+/* Text selection */
+::-moz-selection {
+  color: #080c08;
+  text-shadow: none;
+  background: var(--main-color);
+}
+::selection {
+  color: #080c08;
+  text-shadow: none;
+  background: var(--main-color);
+}
+
+/* Intro header area */
+.intro-header {
+  background: transparent;
+}
+
+.page-heading h1,
+.post-heading h1 {
+  text-shadow: 0 0 18px rgba(0, 255, 65, 0.5);
+}
+
+.page-subheading,
+.post-subheading {
+  color: #7ec87e;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+/* Horizontal rules — look like circuit traces */
+hr {
+  border-color: var(--main-color) !important;
+  opacity: 0.35;
+  box-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+/* Footer */
+footer {
+  background: #080c08 !important;
+  border-top: 1px solid var(--main-color) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--link-color) !important;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+  text-shadow: var(--glow);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: transparent;
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: #080c08;
+}
+
+/* Update list — left border like a circuit trace */
+.main-content ul li {
+  border-left: 2px solid rgba(0, 255, 65, 0.3);
+  padding-left: 8px;
+  margin-bottom: 4px;
+}
+
+/* Italic text (dates) */
+i, em {
+  color: #5ecb5e;
+}
+
+/* Bold text */
+b, strong {
+  color: var(--main-color);
+}
+
+/* Scrollable updates box */
+ul[style*="overflow"] {
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 2px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 255, 65, 0.1);
+  background: rgba(0, 255, 65, 0.02);
+  padding: 10px;
+}
