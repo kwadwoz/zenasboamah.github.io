@@ -7,13 +7,15 @@ use-site-title: true
 ---
 
 
-<br> Hello, My name is Zenas and I am a Senior at Haverford College studying Mathematics (Applied track), graduating
+<div class="intro">
+
+Hello, My name is Zenas and I am a Senior at Haverford College studying Mathematics (Applied track), graduating
 in May 2027. I am an undergraduate researcher in the <a href="https://www.cs.columbia.edu/">Barnard Programming
 	Languages Group at Columbia University</a>, advised by <a href="https://www.marksantolucito.com/">Professor Mark
 	Santolucito</a>, where I worked on designing cloud FPGA accelerators. I am also one of the creators of <a
 	href="https://manhattanreasoning.com/">Manhattan Reasoning</a>, a hardware reasoning platform that gives
-people &mdash; and AI agents &mdash; cloud access to real silicon: an ECP5-85F FPGA cluster with a Python SDK, an
-open toolchain (Yosys, nextpnr, LiteX), and sandboxes for training and benchmarking hardware design agents. I also
+people and AI agents cloud access to real silicon: an ECP5-85F FPGA cluster behind a Python SDK, with
+sandboxes for training and benchmarking hardware design agents. I also
 researched robotic task planning
 and uncertainty quantification at the Haverford Robolab, advised by <a href="https://thao-nguyen-ai.github.io/">
 	Professor Thao Nguyen</a>. My research interests lie in AI systems, computer architecture, and formal methods for
@@ -41,66 +43,61 @@ for relation extraction in clinical text, supervised by <a href="http://www.iitg
 I am also member of my school <a
 	href="https://www.haverfordathletics.com/sports/mtrack-out/2024-25/bios/boamah_zenas_gqx0?view=bio">Men's
 	Varsity
-	Track and Field</a> team, I love to rock climb, work out, and play videos games.<br>
+	Track and Field</a> team, I love to rock climb, work out, and play videos games.
+
+</div>
+
+<p class="section-title">Projects</p>
 
 <div id="chip-3d" style="position:relative">
-  <div id="chip-hint">&#9654; CLICK THE QUADRANTS TO EXPLORE &#9664;</div>
+  <div id="chip-hint">&#9654; HOVER A QUADRANT TO EXPLORE MY PROJECTS &#9664;</div>
 </div>
-<p class="chip-label">ZB-7700-A &nbsp;|&nbsp; hover to tilt &nbsp;&middot;&nbsp; click a block to explore</p>
+<p class="chip-label">ZB-7700-A &nbsp;|&nbsp; hover to explore &nbsp;&middot;&nbsp; click a quadrant to open the project</p>
 <div id="chip-info"></div>
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<p class="section-title">Updates</p>
 
-<b>Updates:</b><br><br>
+<ul class="timeline">
 
-<ul style="height: 300px; overflow: auto">
+	<li><span class="date">2026</span><br>
+		My paper, "Measuring Per-Decision Propagation Work as a Formula-Dependent Signal," was accepted to
+		the ACM Student Research Competition at SPLASH/ISSTA 2026.
+	</li>
 
-	<li><i>2026:</i> My paper, "Measuring Per-Decision Propagation Work as a Formula-Dependent Signal," was accepted to
-		the ACM Student Research Competition at SPLASH/ISSTA 2026. </li><br>
+	<li><span class="date">May 2026</span><br>
+		I joined the Barnard Programming Languages Group at Columbia University, advised by Professor
+		Mark Santolucito, working on LLM-driven design of cloud FPGA accelerators.
+	</li>
 
-	<li><i>May 2026:</i> I joined the Barnard Programming Languages Group at Columbia University, advised by Professor
-		Mark Santolucito, working on LLM-driven design of cloud FPGA accelerators. </li><br>
-
-	<li><i>August 2025:</i> I presented a <a
+	<li><span class="date">August 2025</span><br>
+		I presented a <a
 			href="https://drive.google.com/file/d/1Xh12cVKd2FaaH4Zq41_gUiy8DVo7Dtkj/view?usp=sharing">poster</a>
-		titled, " Motion for Robotic Systems" at the 2025 KINSC Research Symposium. </li><br>
+		titled, " Motion for Robotic Systems" at the 2025 KINSC Research Symposium.
+	</li>
 
+	<li><span class="date">February 2025</span><br>
+		I joined Professor Thao Nguyen's Lab (Haverford Robolab), working on Robotics Task Planning and
+		Human-Robot Interaction.
+	</li>
 
-	<li><i>February 2025:</i> I joined Professor Professor Nguyen Thao's Lab (Haverford Robotics Lab Group),
-		working on
-		Robotics Task Planning and Human-Robot Interaction.
-	</li><br>
-
-	<li><i>October 2024:</i> I presented a <a
-			href="./static/poster/Zenas Boamah NanoGrav Poster Final Draft.pdf">poster</a>
+	<li><span class="date">October 2024</span><br>
+		I presented a <a href="./static/poster/Zenas Boamah NanoGrav Poster Final Draft.pdf">poster</a>
 		titled, "Advancing Space Navigation through Lunar Occultation" for NANOGrav's Fall 2024 Collaboration
-		Meeting in
-		University of Michigan.
-	</li><br>
+		Meeting in University of Michigan.
+	</li>
 
-
-	<li><i>May 2024:</i> I joined Professor Andrea Lommen's Lab, working on Lunar Occultation Algorithms for Space
+	<li><span class="date">May 2024</span><br>
+		I joined Professor Andrea Lommen's Lab, working on Lunar Occultation Algorithms for Space
 		Navigation, Yay!
-	</li><br>
+	</li>
 
 </ul>
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-<div class="reg-section">
-  <p class="reg-section-title">REGISTER ALLOCATOR</p>
-  <p class="reg-section-desc">
-    One of the hardest problems in compiler design: fitting unlimited program variables into a tiny set of hardware registers.
-    When registers fill up, variables get <span style="color:#ff8800">spilled</span> to slow RAM.
-    Watch LRU eviction in real time.
-  </p>
-  <div id="regalloc-3d"></div>
-</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ═══════════════════════════════════════════════
-   CHIP DIE — interactive 3D
+   LGA PACKAGE: four quadrants, one per project
 ═══════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -109,19 +106,20 @@ I am also member of my school <a
   var hint      = document.getElementById('chip-hint');
   if (!container || typeof THREE === 'undefined') return;
 
-  var blocks = [
-    { name: 'COMPILER UNIT',
-      desc: 'Barnard Programming Languages Group, Columbia University — agent harnesses that task LLMs with designing cloud FPGA accelerators. Advised by Prof. Mark Santolucito.',
-      link: null },
-    { name: 'PHYSICS MODULE',
-      desc: 'NANOGrav Physics Frontiers Center — Lunar Occultation Algorithms for Space Navigation. Developing algorithms to improve pulsar timing and navigation using gravitational wave data with Prof. Andrea Lommen.',
-      link: 'https://nanograv.org/', linkLabel: 'nanograv.org' },
-    { name: 'ROBOTICS CORE',
-      desc: 'Haverford Robolab — natural language instructions into typed constraint representations for grounded robot control, integrated with ROS2 perception and control pipelines. Analysis of Wavefront, PRM, and RRT motion planners with Prof. Thao Nguyen.',
-      link: null },
-    { name: 'ML ENGINE',
-      desc: 'Machine Learning Systems — deep learning for robotic perception and decision-making. Exploring neural architectures that enable robots to learn and adapt in real-world environments.',
-      link: null },
+  /* quadrant index = (x >= 0 ? 1 : 0) + (z < 0 ? 2 : 0) */
+  var zones = [
+    { name: 'ECP5-ETHERNET-SOC', tag: 'HARDWARE',
+      desc: 'A UDP/TCP echo SoC on the Lattice ECP5, built from Amaranth HDL, LiteX, and bare-metal VexRiscv firmware. The prototype node for a 10-node cloud FPGA cluster.',
+      link: 'https://github.com/kwadwoz/ecp5-ethernet-soc', linkLabel: 'github.com/kwadwoz/ecp5-ethernet-soc' },
+    { name: 'ALL PROJECTS', tag: 'INDEX',
+      desc: 'Every project in one place, with the full write-ups.',
+      link: '{{ site.baseurl }}/projects/', linkLabel: 'see the projects page' },
+    { name: 'MANHATTAN REASONING', tag: 'PLATFORM',
+      desc: 'Cloud access to real silicon for people and AI agents. A cluster of ECP5-85F FPGAs behind a Python SDK, with sandboxes for training and benchmarking hardware design agents.',
+      link: 'https://manhattanreasoning.com/', linkLabel: 'manhattanreasoning.com' },
+    { name: 'MINI-DSL-SCALA', tag: 'COMPILER',
+      desc: 'A tiny language that compiles code into circuits. A Scala 3 compiler lowers the AST to synthesizable Verilog, then proves it correct against a reference interpreter on real silicon.',
+      link: 'https://github.com/kwadwoz/mini-dsl-scala', linkLabel: 'github.com/kwadwoz/mini-dsl-scala' },
   ];
 
   var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -131,316 +129,224 @@ I am also member of my school <a
   container.appendChild(renderer.domElement);
 
   var scene  = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 50);
-  camera.position.set(0, 3.8, 5.8);
+  var camera = new THREE.PerspectiveCamera(32, container.clientWidth / container.clientHeight, 0.1, 60);
+  camera.position.set(0, 0.5, 6.8);
   camera.lookAt(0, 0, 0);
 
-  scene.add(new THREE.AmbientLight(0x003300, 0.9));
-  var keyLight = new THREE.PointLight(0x00ff41, 3.5, 14);
-  keyLight.position.set(0, 5, 3); scene.add(keyLight);
-  var rl = new THREE.PointLight(0x004422, 1.2, 8);
-  rl.position.set(-4, 1, -3); scene.add(rl);
+  scene.add(new THREE.AmbientLight(0x24303a, 0.7));
+  var keyLight = new THREE.DirectionalLight(0xfff4e0, 1.5);
+  keyLight.position.set(2.6, 5.4, 3.6); scene.add(keyLight);
+  var sheen = new THREE.PointLight(0xffffff, 1.5, 12);
+  sheen.position.set(-1.8, 3.2, 2.6); scene.add(sheen);
+  var rimLight = new THREE.PointLight(0x00ff41, 1.6, 11);
+  rimLight.position.set(-3.2, 0.9, -3.0); scene.add(rimLight);
+  var fillLight = new THREE.PointLight(0x3a6fa8, 1.0, 14);
+  fillLight.position.set(3.0, 1.2, -2.4); scene.add(fillLight);
 
-  var texCanvas = document.createElement('canvas');
-  texCanvas.width = texCanvas.height = 512;
-  var circuitTex = new THREE.CanvasTexture(texCanvas);
-  var blockColors = ['#0e2a10','#0a221e','#0e2a0e','#0a1e22'];
+  var chipGroup = new THREE.Group(); scene.add(chipGroup);
+  var W = 3.05, D = 2.55, TH = 0.10, TOP = TH / 2;
 
-  function drawTex(hot) {
-    var S=512,H=256,ctx=texCanvas.getContext('2d');
-    ctx.fillStyle='#0a1a0a';ctx.fillRect(0,0,S,S);
-    for(var i=0;i<4;i++){
-      var qx=(i%2)*H,qy=Math.floor(i/2)*H,isHot=(hot===i);
-      ctx.fillStyle=isHot?'#163016':blockColors[i];
-      ctx.fillRect(qx+2,qy+2,H-4,H-4);
-      ctx.fillStyle=isHot?'#00ff41':'rgba(0,255,65,0.42)';
-      ctx.font='bold 18px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
-      var parts=blocks[i].name.split(' ');
-      parts.forEach(function(w,wi){ctx.fillText(w,qx+H/2,qy+H/2+(wi-(parts.length-1)/2)*24);});
-      if(isHot){ctx.strokeStyle='#00ff41';ctx.lineWidth=3;ctx.strokeRect(qx+5,qy+5,H-10,H-10);}
+  /* ---------- substrate: solder mask, gold traces, silkscreen ---------- */
+  var subCanvas = document.createElement('canvas');
+  subCanvas.width = subCanvas.height = 1024;
+  var subTex = new THREE.CanvasTexture(subCanvas);
+  subTex.flipY = false;
+
+  function drawSub(hot) {
+    var S = 1024, x = subCanvas.getContext('2d');
+    var g = x.createLinearGradient(0, 0, S, S);
+    g.addColorStop(0, '#123a30'); g.addColorStop(0.45, '#0c2b24'); g.addColorStop(1, '#08201b');
+    x.fillStyle = g; x.fillRect(0, 0, S, S);
+    for (var i = 0; i < 9000; i++) {
+      x.fillStyle = 'rgba(255,255,255,' + (Math.random() * 0.028) + ')';
+      x.fillRect(Math.random() * S, Math.random() * S, 2, 2);
     }
-    ctx.strokeStyle='#00ff41';ctx.lineWidth=2;
-    ctx.beginPath();ctx.moveTo(H,0);ctx.lineTo(H,S);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(0,H);ctx.lineTo(S,H);ctx.stroke();
-    ctx.strokeStyle='rgba(0,255,65,0.07)';ctx.lineWidth=0.5;
-    for(var g=0;g<=16;g++){var gs=g*32;
-      ctx.beginPath();ctx.moveTo(gs,0);ctx.lineTo(gs,S);ctx.stroke();
-      ctx.beginPath();ctx.moveTo(0,gs);ctx.lineTo(S,gs);ctx.stroke();}
-    ctx.lineCap='round';
-    var segs=[[[24,24],[24,80],[80,80]],[[80,24],[80,80],[210,80]],[[24,190],[180,190],[180,80]]];
-    [{x:0,y:0},{x:H,y:0},{x:0,y:H},{x:H,y:H}].forEach(function(o){
-      ctx.strokeStyle='rgba(0,255,65,0.35)';ctx.lineWidth=2;
-      segs.forEach(function(seg){
-        ctx.beginPath();ctx.moveTo(o.x+seg[0][0],o.y+seg[0][1]);
-        for(var si=1;si<seg.length;si++)ctx.lineTo(o.x+seg[si][0],o.y+seg[si][1]);ctx.stroke();});
-      [[24,24],[24,80],[80,80],[210,80],[80,24],[24,190],[180,190]].forEach(function(p){
-        ctx.fillStyle='rgba(0,255,65,0.5)';
-        ctx.beginPath();ctx.arc(o.x+p[0],o.y+p[1],4.5,0,Math.PI*2);ctx.fill();
-        ctx.fillStyle='#0a1a0a';
-        ctx.beginPath();ctx.arc(o.x+p[0],o.y+p[1],1.8,0,Math.PI*2);ctx.fill();});});
-    ctx.fillStyle='#00ff41';ctx.beginPath();ctx.arc(14,14,7,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#0a1a0a';ctx.beginPath();ctx.arc(14,14,3,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='rgba(0,255,65,0.28)';ctx.lineWidth=5;ctx.strokeRect(6,6,S-12,S-12);
-    if(hot<0){ctx.fillStyle='rgba(0,255,65,0.18)';ctx.font='13px monospace';
-      ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('CLICK TO EXPLORE',S/2,S-22);}
-    circuitTex.needsUpdate=true;
+    /* gold guard trace */
+    x.strokeStyle = '#c8a85e'; x.lineWidth = 7; x.strokeRect(38, 38, S - 76, S - 76);
+    x.strokeStyle = 'rgba(200,168,94,0.35)'; x.lineWidth = 2; x.strokeRect(56, 56, S - 112, S - 112);
+    [[70, 70], [S - 70, 70], [70, S - 70], [S - 70, S - 70]].forEach(function (p) {
+      x.fillStyle = '#d8bd76';
+      x.beginPath(); x.arc(p[0], p[1], 11, 0, Math.PI * 2); x.fill();
+    });
+    /* pin-1 chamfer */
+    x.fillStyle = '#e2caa0';
+    x.beginPath(); x.moveTo(66, 66); x.lineTo(150, 66); x.lineTo(66, 150); x.closePath(); x.fill();
+
+    /* quadrant seams: hairlines, lifting only where hovered */
+    function seam(x1, y1, x2, y2, lit) {
+      x.strokeStyle = lit ? 'rgba(255,246,214,0.40)' : 'rgba(200,168,94,0.16)';
+      x.lineWidth = lit ? 3 : 1.5;
+      x.beginPath(); x.moveTo(x1, y1); x.lineTo(x2, y2); x.stroke();
+    }
+    seam(S / 2, 60, S / 2, S - 60, hot >= 0);
+    seam(60, S / 2, S - 60, S / 2, hot >= 0);
+
+    /* centre cavity */
+    x.fillStyle = '#071813'; x.fillRect(348, 364, 328, 296);
+    x.strokeStyle = 'rgba(200,168,94,0.5)'; x.lineWidth = 3; x.strokeRect(348, 364, 328, 296);
+
+    /* package marking */
+    x.fillStyle = 'rgba(226,214,186,0.5)';
+    x.font = '22px "Share Tech Mono", monospace';
+    x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText('ZB-7700-A   HAVERFORD   ECP5-85F', S / 2, S - 92);
+    subTex.needsUpdate = true;
   }
-  drawTex(-1);
+  drawSub(-1);
 
-  var chipGroup=new THREE.Group();scene.add(chipGroup);
-  var sideMat=new THREE.MeshPhongMaterial({color:0x0a1a0a,emissive:0x001800,specular:0x003300,shininess:80});
-  var topMat =new THREE.MeshPhongMaterial({map:circuitTex,emissive:0x001200,specular:0x002200,shininess:120});
-  var botMat =new THREE.MeshPhongMaterial({color:0x050f05,emissive:0x000500});
-  var bodyGeo=new THREE.BoxGeometry(2.4,0.24,2.4);
-  var chipBody=new THREE.Mesh(bodyGeo,[sideMat,sideMat,topMat,botMat,sideMat,sideMat]);
-  chipGroup.add(chipBody);
-  chipBody.add(new THREE.LineSegments(new THREE.EdgesGeometry(bodyGeo),
-    new THREE.LineBasicMaterial({color:0x00ff41,transparent:true,opacity:0.55})));
+  var maskMat = new THREE.MeshPhongMaterial({ color: 0x0b2a22, specular: 0x244a3e, shininess: 60 });
+  var topMat  = new THREE.MeshPhongMaterial({ map: subTex, specular: 0x59705f, shininess: 80 });
+  var backMat = new THREE.MeshPhongMaterial({ color: 0x0a241d, specular: 0x1c3a30, shininess: 40 });
+  var board = new THREE.Mesh(new THREE.BoxGeometry(W, TH, D),
+    [maskMat, maskMat, topMat, backMat, maskMat, maskMat]);
+  chipGroup.add(board);
 
-  var pinMat=new THREE.MeshPhongMaterial({color:0x9a9060,emissive:0x110f00,specular:0x666633,shininess:200});
-  function addPins(n,side){
-    var L=0.28,half=1.2,gap=2.0/(n+1);
-    for(var i=0;i<n;i++){
-      var pin=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.07,L),pinMat),off=-1.0+gap*(i+1);
-      if(side==='front'){pin.position.set(off,-0.085,half+L/2);}
-      if(side==='back'){pin.position.set(off,-0.085,-(half+L/2));}
-      if(side==='right'){pin.rotation.y=Math.PI/2;pin.position.set(half+L/2,-0.085,off);}
-      if(side==='left'){pin.rotation.y=Math.PI/2;pin.position.set(-(half+L/2),-0.085,off);}
-      chipGroup.add(pin);}}
-  addPins(8,'front');addPins(8,'back');addPins(8,'left');addPins(8,'right');
-  var chipGlow=new THREE.PointLight(0x00ff41,0.7,3);
-  chipGlow.position.set(0,0.8,0);chipGroup.add(chipGlow);
+  /* keying notches */
+  var notchMat = new THREE.MeshPhongMaterial({ color: 0x061a15, specular: 0x102822, shininess: 20 });
+  [-1, 1].forEach(function (sx) {
+    [-0.42, 0.42].forEach(function (oz) {
+      var n = new THREE.Mesh(new THREE.BoxGeometry(0.10, TH + 0.02, 0.30), notchMat);
+      n.position.set(sx * (W / 2 - 0.045), 0, oz * D);
+      chipGroup.add(n);
+    });
+  });
 
-  /* Raycaster shared by click + cursor */
-  var raycaster=new THREE.Raycaster(),mouse2=new THREE.Vector2(),hoverM=new THREE.Vector2(-99,-99);
-  var frozen=false,activeIdx=-1,mouseIn=false;
+  /* ---------- gold pad array ---------- */
+  var COLS = 34, ROWS = 28, INSET = 0.30;
+  var stepX = (W - INSET * 2) / (COLS - 1), stepZ = (D - INSET * 2) / (ROWS - 1);
+  var VOID_X = 0.48, VOID_Z = 0.42;
 
-  function showBlock(idx){
-    var b=blocks[idx];activeIdx=idx;drawTex(idx);
+  var padPos = [], padQuad = [];
+  for (var c = 0; c < COLS; c++) {
+    for (var r = 0; r < ROWS; r++) {
+      var pxx = -W / 2 + INSET + c * stepX, pzz = -D / 2 + INSET + r * stepZ;
+      if (Math.abs(pxx) < VOID_X && Math.abs(pzz) < VOID_Z) continue;
+      padPos.push([pxx, pzz]);
+      padQuad.push((pxx >= 0 ? 1 : 0) + (pzz < 0 ? 2 : 0));
+    }
+  }
+
+  var padMat = new THREE.MeshPhongMaterial({
+    color: 0xffffff, specular: 0xfff3d0, shininess: 190, emissive: 0x1a1204 });
+  var pads = new THREE.InstancedMesh(
+    new THREE.CylinderGeometry(0.030, 0.032, 0.022, 12), padMat, padPos.length);
+  var GOLD = new THREE.Color(0xd9b869), GOLD_DIM = new THREE.Color(0xa8894a),
+      LIT = new THREE.Color(0xffe9a8);
+  var dummy = new THREE.Object3D();
+  padPos.forEach(function (p, k) {
+    dummy.position.set(p[0], TOP + 0.010, p[1]);
+    dummy.updateMatrix();
+    pads.setMatrixAt(k, dummy.matrix);
+    pads.setColorAt(k, GOLD.clone().lerp(GOLD_DIM, ((k * 37) % 100) / 220));
+  });
+  pads.instanceMatrix.needsUpdate = true;
+  chipGroup.add(pads);
+
+  function paintPads(hot) {
+    padPos.forEach(function (p, k) {
+      var base = GOLD.clone().lerp(GOLD_DIM, ((k * 37) % 100) / 220);
+      pads.setColorAt(k, padQuad[k] === hot ? LIT : base);
+    });
+    pads.instanceColor.needsUpdate = true;
+  }
+
+  /* ---------- centre capacitors ---------- */
+  var capMat = new THREE.MeshPhongMaterial({ color: 0x14161a, specular: 0x4a4f57, shininess: 90 });
+  var capEnd = new THREE.MeshPhongMaterial({ color: 0xb9bec6, specular: 0xffffff, shininess: 160 });
+  for (var cx = -3; cx <= 3; cx++) {
+    for (var cz = -2; cz <= 2; cz++) {
+      if ((cx + cz) % 2 !== 0) continue;
+      var cap = new THREE.Mesh(new THREE.BoxGeometry(0.085, 0.030, 0.045),
+        [capEnd, capEnd, capMat, capMat, capMat, capMat]);
+      cap.position.set(cx * 0.108, TOP + 0.015, cz * 0.118);
+      chipGroup.add(cap);
+    }
+  }
+
+  var padGlow = new THREE.PointLight(0xffd98a, 0.45, 3.2);
+  padGlow.position.set(0, 0.7, 0); chipGroup.add(padGlow);
+
+  /* ---------- hover explores, click opens ---------- */
+  var raycaster = new THREE.Raycaster(), ptr = new THREE.Vector2(-99, -99);
+  var active = -1, mouseIn = false;
+
+  function pick() {
+    raycaster.setFromCamera(ptr, camera);
+    var hits = raycaster.intersectObject(board);
+    if (!hits.length) return -1;
+    var lp = board.worldToLocal(hits[0].point.clone());
+    if (lp.y < TOP - 0.001) return -1;
+    return (lp.x >= 0 ? 1 : 0) + (lp.z < 0 ? 2 : 0);
+  }
+
+  function showZone(idx) {
+    var z = zones[idx];
+    drawSub(idx); paintPads(idx);
     container.classList.add('explored');
-    if(hint)hint.classList.add('hidden');
-    infoPanel.innerHTML='<div class="bi-name">'+b.name+'</div><hr class="bi-hr">'+
-      '<p class="bi-desc">'+b.desc+'</p>'+
-      (b.link?'<a class="bi-link" href="'+b.link+'" target="_blank">'+b.linkLabel+'</a><br>':'')+
-      '<span class="bi-hint">[ click chip or press ESC to close ]</span>';
-    infoPanel.style.display='block';
-    requestAnimationFrame(function(){infoPanel.style.opacity='1';});}
+    if (hint) hint.classList.add('hidden');
+    infoPanel.innerHTML = '<div class="bi-name">' + z.name + '</div><hr class="bi-hr">' +
+      '<p class="bi-desc">' + z.desc + '</p>' +
+      '<a class="bi-link" href="' + z.link + '">' + z.linkLabel + '</a><br>' +
+      '<span class="bi-hint">[ click the quadrant to open ]</span>';
+    infoPanel.style.display = 'block';
+    requestAnimationFrame(function () { infoPanel.style.opacity = '1'; });
+  }
+  function clearZone() {
+    infoPanel.style.opacity = '0';
+    setTimeout(function () { infoPanel.style.display = 'none'; }, 250);
+    drawSub(-1); paintPads(-1);
+    container.classList.remove('explored');
+    if (hint) hint.classList.remove('hidden');
+  }
 
-  function hidePanel(){
-    infoPanel.style.opacity='0';
-    setTimeout(function(){infoPanel.style.display='none';},250);
-    activeIdx=-1;drawTex(-1);frozen=false;}
+  renderer.domElement.addEventListener('mousemove', function (e) {
+    var rect = container.getBoundingClientRect();
+    ptr.x = (e.clientX - rect.left) / rect.width * 2 - 1;
+    ptr.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+    var s = pick();
+    if (s !== active) { active = s; if (s >= 0) showZone(s); else clearZone(); }
+    renderer.domElement.style.cursor = s >= 0 ? 'pointer' : 'crosshair';
+  });
+  renderer.domElement.addEventListener('click', function () {
+    if (active < 0) return;
+    var l = zones[active].link;
+    if (l.indexOf('http') === 0) window.open(l, '_blank'); else window.location.href = l;
+  });
 
-  renderer.domElement.addEventListener('click',function(e){
-    if(frozen){hidePanel();return;}
-    var rect=container.getBoundingClientRect();
-    mouse2.x=(e.clientX-rect.left)/rect.width*2-1;
-    mouse2.y=-((e.clientY-rect.top)/rect.height)*2+1;
-    raycaster.setFromCamera(mouse2,camera);
-    var hits=raycaster.intersectObject(chipBody);
-    if(hits.length>0){
-      var lp=chipGroup.worldToLocal(hits[0].point.clone());
-      if(lp.y>0.08){frozen=true;showBlock((lp.x>=0?1:0)+(lp.z<0?2:0));}}});
+  var BASE_TILT = 1.30;
+  var tiltX = BASE_TILT, tiltY = 0, curX = BASE_TILT, curY = 0;
+  container.addEventListener('mousemove', function (e) {
+    var r = container.getBoundingClientRect();
+    tiltX = ((e.clientY - r.top) / r.height * 2 - 1) * 0.14 + BASE_TILT;
+    tiltY = ((e.clientX - r.left) / r.width * 2 - 1) * 0.26;
+  });
+  container.addEventListener('mouseenter', function () { mouseIn = true; });
+  container.addEventListener('mouseleave', function () {
+    mouseIn = false; ptr.set(-99, -99);
+    tiltX = BASE_TILT; tiltY = 0;
+    if (active !== -1) { active = -1; clearZone(); }
+  });
 
-  /* cursor: pointer when hovering top face */
-  renderer.domElement.addEventListener('mousemove',function(e){
-    var rect=container.getBoundingClientRect();
-    hoverM.x=(e.clientX-rect.left)/rect.width*2-1;
-    hoverM.y=-((e.clientY-rect.top)/rect.height)*2+1;});
-  renderer.domElement.addEventListener('mouseleave',function(){hoverM.set(-99,-99);});
-
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&frozen)hidePanel();});
-
-  var tiltX=-0.12,tiltY=0.0,curX=-0.12,curY=0.0;
-  container.addEventListener('mousemove',function(e){
-    if(frozen)return;var r=container.getBoundingClientRect();
-    tiltX=-((e.clientY-r.top)/r.height*2-1)*0.35-0.12;
-    tiltY=(e.clientX-r.left)/r.width*2-1;});
-  container.addEventListener('mouseenter',function(){mouseIn=true;});
-  container.addEventListener('mouseleave',function(){mouseIn=false;if(!frozen){tiltX=-0.12;tiltY=0.0;}});
-
-  var t=0;
-  function animate(){
-    requestAnimationFrame(animate);t+=0.016;
-    if(!frozen){
-      if(!mouseIn)tiltY=t*0.45;
-      curX+=(tiltX-curX)*0.06;curY+=(tiltY-curY)*0.06;
-      chipGroup.rotation.x=curX;chipGroup.rotation.y=curY;}
-    chipGroup.position.y=Math.sin(t*0.9)*0.18;
-    chipGlow.intensity=0.5+Math.sin(t*2.2)*0.25;
-    keyLight.intensity=3.0+Math.sin(t*1.4)*0.60;
-
-    /* cursor update via per-frame raycast */
-    if(mouseIn&&!frozen){
-      raycaster.setFromCamera(hoverM,camera);
-      var topHit=raycaster.intersectObject(chipBody);
-      var onTop=topHit.length>0&&chipGroup.worldToLocal(topHit[0].point.clone()).y>0.08;
-      renderer.domElement.style.cursor=onTop?'pointer':'crosshair';
-    } else { renderer.domElement.style.cursor=''; }
-
-    renderer.render(scene,camera);}
+  var t = 0;
+  function animate() {
+    requestAnimationFrame(animate); t += 0.016;
+    if (!mouseIn) {
+      tiltY = Math.sin(t * 0.30) * 0.20;
+      tiltX = BASE_TILT + Math.sin(t * 0.20) * 0.06;
+    }
+    curX += (tiltX - curX) * 0.06; curY += (tiltY - curY) * 0.06;
+    chipGroup.rotation.x = curX; chipGroup.rotation.y = curY;
+    chipGroup.position.y = Math.sin(t * 0.8) * 0.05;
+    padGlow.intensity = 0.38 + Math.sin(t * 2.0) * 0.14;
+    rimLight.intensity = 1.4 + Math.sin(t * 1.2) * 0.35;
+    sheen.position.x = Math.sin(t * 0.5) * 2.4;
+    renderer.render(scene, camera);
+  }
   animate();
 
-  new ResizeObserver(function(){
-    var w=container.clientWidth,h=container.clientHeight;
-    renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
+  new ResizeObserver(function () {
+    var w = container.clientWidth, h = container.clientHeight;
+    renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix();
   }).observe(container);
-})();
-
-/* ═══════════════════════════════════════════════
-   REGISTER ALLOCATOR — live animation
-═══════════════════════════════════════════════ */
-(function(){
-  'use strict';
-  var c=document.getElementById('regalloc-3d');
-  if(!c||typeof THREE==='undefined') return;
-
-  var R=new THREE.WebGLRenderer({antialias:true,alpha:true});
-  R.setClearColor(0,0);R.setSize(c.clientWidth,c.clientHeight);
-  c.appendChild(R.domElement);
-
-  var scene=new THREE.Scene();
-  var cam=new THREE.PerspectiveCamera(42,c.clientWidth/c.clientHeight,0.1,50);
-  cam.position.set(0,1.2,7);cam.lookAt(0,0,0);
-
-  scene.add(new THREE.AmbientLight(0x003300,1.3));
-  var pl=new THREE.PointLight(0x00ff41,2.5,14);pl.position.set(0,4,3);scene.add(pl);
-
-  /* helpers */
-  function wbox(w,h,d,col,op){
-    var l=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(w,h,d)),
-      new THREE.LineBasicMaterial({color:col||0x00ff41,transparent:true,opacity:op||0.8}));
-    return l;}
-
-  function slab(w,h,d,col,op){
-    return new THREE.Mesh(new THREE.BoxGeometry(w,h,d),
-      new THREE.MeshPhongMaterial({color:col||0x001a00,transparent:true,opacity:op||0.75}));}
-
-  function mkSprite(txt,col,W,H,sw,sh){
-    var cv=document.createElement('canvas');cv.width=W||256;cv.height=H||80;
-    var x=cv.getContext('2d');
-    x.font='bold '+Math.round((H||80)*0.50)+'px monospace';
-    x.fillStyle=col||'#00ff41';x.textAlign='center';x.textBaseline='middle';
-    x.fillText(txt,cv.width/2,cv.height/2);
-    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),transparent:true,depthTest:false}));
-    sp.scale.set(sw||1,sh||0.4,1);return sp;}
-
-  /* register file layout */
-  var NR=4,RS=0.72,RG=1.12,RY=0.7,RAMY=-1.3;
-  function rx(i){return(i-(NR-1)/2)*RG;}
-
-  var slots=[];
-  for(var si=0;si<NR;si++){
-    var x=rx(si);
-    var sw=wbox(RS,RS,RS);sw.position.set(x,RY,0);scene.add(sw);
-    var sf=slab(RS-0.07,RS-0.07,RS-0.07,0x001200);sf.position.set(x,RY,0);scene.add(sf);
-    var sl=mkSprite('R'+si,'#00ff41',128,64,0.6,0.35);sl.position.set(x,RY-0.66,0);scene.add(sl);
-    slots.push({x:x,occ:null,wire:sw});}
-
-  /* "REGISTER FILE" header */
-  var rfLbl=mkSprite('REGISTER FILE','#ffffff',320,80,2.4,0.45);rfLbl.position.set(0,RY+0.76,0);scene.add(rfLbl);
-
-  /* RAM area */
-  var ramW=NR*RG+0.5;
-  var rw=wbox(ramW,0.62,RS,0x224422,0.5);rw.position.set(0,RAMY,0);scene.add(rw);
-  var rf2=slab(ramW-0.07,0.55,RS-0.07,0x040804,0.7);rf2.position.set(0,RAMY,0);scene.add(rf2);
-  var ramLbl=mkSprite('RAM  (SLOW)','#ffcc88',320,80,2.2,0.42);ramLbl.position.set(0,RAMY+0.55,0);scene.add(ramLbl);
-
-  /* status banner */
-  var statusSpr=mkSprite('','#ffffff',512,72,3.6,0.48);statusSpr.position.set(0,1.95,0);scene.add(statusSpr);
-  function setStatus(txt,col){
-    var cv=document.createElement('canvas');cv.width=512;cv.height=72;
-    var x=cv.getContext('2d');x.fillStyle=col||'#ffffff';x.font='bold 18px monospace';
-    x.textAlign='center';x.textBaseline='middle';x.fillText(txt,256,36);
-    statusSpr.material.map=new THREE.CanvasTexture(cv);statusSpr.material.needsUpdate=true;}
-
-  /* variable tracking */
-  var VNAMES='x y z a b c t0 t1 n i j ptr'.split(' ');
-  var ni=0,vars=[],lru=[],timer=0,INTERVAL=1.7;
-  var RAM_XS=[-1.5,-0.5,0.5,1.5],ramSlotUsed=[false,false,false,false];
-
-  function nextRamX(){
-    for(var k=0;k<RAM_XS.length;k++){if(!ramSlotUsed[k]){ramSlotUsed[k]=true;return{x:RAM_XS[k],slot:k};}}
-    return{x:0,slot:0};}
-
-  function freeRamSlot(slot){if(slot!=null)ramSlotUsed[slot]=false;}
-
-  function varGeo(){return new THREE.BoxGeometry(RS-0.2,RS-0.2,RS-0.2);}
-
-  function mkVarMesh(name,regIdx,startY){
-    var g=varGeo();
-    var mesh=new THREE.Mesh(g,new THREE.MeshPhongMaterial({color:0x00ff41,emissive:0x003800}));
-    mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(g),
-      new THREE.LineBasicMaterial({color:0x00ff41,transparent:true,opacity:0.9})));
-    var lbl=mkSprite(name,'#ffffff',128,96,0.56,0.48);mesh.add(lbl);
-    mesh.position.set(rx(regIdx),startY,0);
-    scene.add(mesh);return mesh;}
-
-  function setSpilled(v){
-    v.mesh.material.color.setHex(0xcc5500);
-    v.mesh.material.emissive.setHex(0x331100);
-    v.mesh.children.forEach(function(ch){if(ch.isLineSegments)ch.material.color.setHex(0xff7700);});}
-
-  function updateLRU(regIdx){
-    var p=lru.indexOf(regIdx);if(p>=0)lru.splice(p,1);lru.push(regIdx);}
-
-  function spawn(){
-    /* clean oldest RAM var if overflowing */
-    var ramVars=vars.filter(function(v){return v.state==='inRAM';});
-    if(ramVars.length>=4){
-      var old=ramVars[0];freeRamSlot(old.ramSlot);scene.remove(old.mesh);vars.splice(vars.indexOf(old),1);}
-
-    var name=VNAMES[ni%VNAMES.length];ni++;
-    var free=-1;
-    for(var k=0;k<NR;k++){if(slots[k].occ===null){free=k;break;}}
-
-    if(free>=0){
-      var v={mesh:mkVarMesh(name,free,3.0),name:name,state:'falling',
-             target:new THREE.Vector3(rx(free),RY,0),reg:free,ramSlot:null};
-      slots[free].occ=v;vars.push(v);updateLRU(free);
-      setStatus('ALLOC:  R'+free+' ← '+name,'#00e538');
-    } else {
-      /* LRU eviction */
-      var evictReg=lru[0];
-      var evicted=slots[evictReg].occ;
-      var rs=nextRamX();
-      evicted.state='evicting';evicted.target=new THREE.Vector3(rs.x,RAMY,0);evicted.ramSlot=rs.slot;
-      setSpilled(evicted);slots[evictReg].occ=null;lru.shift();
-      /* allocate new var */
-      var v2={mesh:mkVarMesh(name,evictReg,3.0),name:name,state:'falling',
-              target:new THREE.Vector3(rx(evictReg),RY,0),reg:evictReg,ramSlot:null};
-      slots[evictReg].occ=v2;vars.push(v2);lru.push(evictReg);
-      setStatus('SPILL: '+evicted.name+' → RAM  |  R'+evictReg+' ← '+name,'#ff8800');}}
-
-  /* kick off with first few vars immediately */
-  var preload=[0,1,2,3];
-  preload.forEach(function(ri){
-    var name=VNAMES[ni%VNAMES.length];ni++;
-    var v={mesh:mkVarMesh(name,ri,3.0),name:name,state:'falling',
-           target:new THREE.Vector3(rx(ri),RY,0),reg:ri,ramSlot:null};
-    slots[ri].occ=v;vars.push(v);lru.push(ri);});
-  setStatus('REGISTER FILE INITIALIZED','#00ff41');
-
-  var clk=new THREE.Clock(),glo=0;
-  function animate(){
-    requestAnimationFrame(animate);
-    var dt=clk.getDelta();timer+=dt;glo+=dt;
-    if(timer>=INTERVAL){timer=0;spawn();}
-    vars.forEach(function(v){
-      if(v.state==='falling'||v.state==='evicting'){
-        v.mesh.position.lerp(v.target,0.09);
-        if(v.mesh.position.distanceTo(v.target)<0.05){
-          v.mesh.position.copy(v.target);
-          v.state=v.state==='falling'?'inReg':'inRAM';}}});
-    /* pulse free register wireframes */
-    var pulse=0.4+Math.sin(glo*2.5)*0.35;
-    slots.forEach(function(s){s.wire.material.opacity=s.occ?0.85:pulse;});
-    pl.intensity=2.2+Math.sin(glo*1.8)*0.5;
-    R.render(scene,cam);}
-  animate();
-
-  new ResizeObserver(function(){
-    var w=c.clientWidth,h=c.clientHeight;
-    R.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}).observe(c);
 })();
 </script>

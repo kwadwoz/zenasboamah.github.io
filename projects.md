@@ -4,16 +4,30 @@ title: Projects
 use-site-title: true
 ---
 
-### [Manhattan Reasoning](https://manhattanreasoning.com/)
+<div class="card-grid">
 
-A hardware reasoning platform I help build, giving people — and AI agents — cloud access to real silicon. It provides a cluster of Lattice ECP5-85F FPGAs behind a Python SDK and CLI, an open toolchain built on Yosys, nextpnr, and LiteX, and sandboxed environments with verifiable reward signals for training and benchmarking hardware design agents.
+  <a class="card" href="https://manhattanreasoning.com/" target="_blank">
+    <span class="card-tag">PLATFORM</span>
+    <h3 class="card-title">Manhattan Reasoning</h3>
+    <p class="card-desc">Cloud access to real silicon for people and AI agents. A cluster of ECP5-85F FPGAs behind a
+      Python SDK, with sandboxes for training and benchmarking hardware design agents.</p>
+    <span class="card-meta">manhattanreasoning.com</span>
+  </a>
 
-### [mini-dsl-scala](https://github.com/kwadwoz/mini-dsl-scala)
+  <a class="card" href="https://github.com/kwadwoz/mini-dsl-scala" target="_blank">
+    <span class="card-tag">COMPILER</span>
+    <h3 class="card-title">mini-dsl-scala</h3>
+    <p class="card-desc">A tiny language that compiles code into circuits. A Scala 3 compiler lowers the AST to
+      synthesizable Verilog, then proves it correct against a reference interpreter on real silicon.</p>
+    <span class="card-meta">Scala 3 &middot; Verilog &middot; ECP5</span>
+  </a>
 
-A tiny language that compiles code into circuits. You write a small imperative program in a Lox-like DSL; the Scala 3 compiler lowers the AST to synthesizable Verilog with a Wishbone register interface plus a matching Python client, then proves the hardware correct by simulating it and comparing against a reference interpreter. The generated design runs on real ECP5-85F silicon.
+  <a class="card" href="https://github.com/kwadwoz/ecp5-ethernet-soc" target="_blank">
+    <span class="card-tag">HARDWARE</span>
+    <h3 class="card-title">ecp5-ethernet-soc</h3>
+    <p class="card-desc">A UDP/TCP echo SoC on the Lattice ECP5, built from Amaranth HDL, LiteX, and bare-metal
+      VexRiscv firmware. The prototype node for a 10-node cloud FPGA cluster.</p>
+    <span class="card-meta">Amaranth &middot; LiteX &middot; VexRiscv</span>
+  </a>
 
-`Source → Scanner → Parser → AST → Verilog + Python → FPGA`
-
-### [ecp5-ethernet-soc](https://github.com/kwadwoz/ecp5-ethernet-soc)
-
-A UDP/TCP echo SoC for the Lattice ECP5 Evaluation Board. The host sends packets over Ethernet; the FPGA writes each payload into a hardware BRAM, reads it back, and echoes it. Built from an Amaranth HDL Wishbone BRAM inside a LiteX SoC, bare-metal VexRiscv RISC-V firmware (with an lwIP TCP variant), and a host-side harness that sweeps payload sizes to measure round-trip latency and throughput. This is the prototype node for a 10-node cloud FPGA cluster.
+</div>

@@ -3,7 +3,7 @@
 /* --- 3D Chip container --- */
 #chip-3d {
   width: 100%;
-  height: 280px;
+  height: 360px;
   cursor: crosshair;
   margin: 24px 0 0;
   position: relative;
@@ -54,34 +54,6 @@
   text-transform: uppercase;
   opacity: 0.8;
 }
-
-/* --- Register Allocator section --- */
-.reg-section {
-  margin: 30px 0 0;
-}
-.reg-section-title {
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--main-color);
-  font-size: 15px;
-  letter-spacing: 3px;
-  margin: 0 0 6px;
-  text-shadow: 0 0 10px rgba(0,255,65,0.3);
-}
-.reg-section-title::before { content: '// '; opacity: 0.5; }
-.reg-section-desc {
-  font-family: 'Share Tech Mono', monospace;
-  color: #d8eed8;
-  font-size: 13px;
-  line-height: 1.6;
-  margin: 0 0 10px;
-}
-#regalloc-3d {
-  width: 100%;
-  height: 260px;
-  background: transparent;
-  margin-bottom: 4px;
-}
-#regalloc-3d canvas { display: block; }
 
 :root {
   --main-color: #00ff41;
