@@ -377,3 +377,80 @@ footer .copyright a, footer .theme-by a { color: rgba(0, 255, 65, 0.55); }
 
 /* --- Cards should never inherit link underlines --- */
 .card, .card * { text-decoration: none !important; }
+
+/* --- Experience / Education rows --- */
+.entry-list { margin: 26px 0 10px; }
+.entry {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 18px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s cubic-bezier(.2,.7,.3,1);
+}
+.entry + .entry { margin-top: 10px; }
+.entry:hover {
+  background: rgba(0, 255, 65, 0.035);
+  border-color: var(--edge);
+  transform: translateX(4px);
+}
+
+/* logo tile: no plate, no white backing */
+.entry-logo {
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 27px;
+  letter-spacing: 1px;
+  color: var(--main-color);
+  text-shadow: 0 0 14px var(--glow);
+  flex: none;
+}
+/* invert + hue-rotate turns the white plate near-black and keeps hues;
+   screen then drops that near-black entirely, leaving only the mark */
+.entry-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(1) hue-rotate(180deg) brightness(1.35) contrast(1.15);
+  mix-blend-mode: screen;
+  opacity: 0.92;
+  transition: opacity 0.3s, filter 0.3s;
+}
+.entry:hover .entry-logo img {
+  opacity: 1;
+  filter: invert(1) hue-rotate(180deg) brightness(1.55) contrast(1.2);
+}
+
+.entry-body { min-width: 0; padding-top: 2px; }
+.entry-head {
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 0 0 6px;
+  color: rgba(240, 240, 240, 0.55);
+}
+.entry-head strong { color: #fff; font-weight: 700; }
+.entry-role {
+  font-size: 15.5px;
+  line-height: 1.5;
+  margin: 0 0 4px;
+  color: rgba(240, 240, 240, 0.62);
+}
+.entry-note {
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(240, 240, 240, 0.42);
+}
+.entry-note a, .entry-role a { color: var(--main-color); }
+
+@media only screen and (max-width: 600px) {
+  .entry { grid-template-columns: 56px 1fr; gap: 14px; padding: 14px 8px; }
+  .entry-logo { width: 56px; height: 56px; font-size: 19px; }
+  .entry-head { font-size: 15.5px; }
+}
