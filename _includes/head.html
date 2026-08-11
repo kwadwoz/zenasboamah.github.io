@@ -95,6 +95,40 @@
   {% endif %}
 
 
+  <!-- Structured data: tells search engines this site is about a person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zenas Boamah",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}{{ site.avatar }}",
+    "email": "mailto:{{ site.author.email }}",
+    "jobTitle": "Undergraduate Researcher",
+    "description": "{{ site.description }}",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Haverford College"
+    },
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "Haverford College" },
+      { "@type": "CollegeOrUniversity", "name": "Columbia University" }
+    ],
+    "knowsAbout": [
+      "AI Systems",
+      "Computer Architecture",
+      "Hardware-Software Codesign",
+      "Formal Methods",
+      "FPGA"
+    ],
+    "sameAs": [
+      "https://github.com/{{ site.author.github }}",
+      "https://www.linkedin.com/in/{{ site.author.linkedin }}",
+      "https://manhattanreasoning.com/"
+    ]
+  }
+  </script>
+
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />

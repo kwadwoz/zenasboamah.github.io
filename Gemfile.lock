@@ -305,6 +305,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate (~> 1.1)
+  jekyll-sitemap
   webrick (~> 1.8)
 
 BUNDLED WITH

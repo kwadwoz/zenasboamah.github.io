@@ -5,7 +5,7 @@
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "https://kwadwoz.github.io"
-baseurl: "/zenasboamah.github.io"
+baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
@@ -17,7 +17,7 @@ baseurl: "/zenasboamah.github.io"
 title: Zenas Boamah
 
 # Short description of your site
-description: Personal Website
+description: Zenas Boamah is a mathematics student at Haverford College researching AI systems, computer architecture, and hardware-software codesign.
 
 # --- Navigation bar options --- #
 
@@ -73,7 +73,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "zenasboamah.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "kwadwoz.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
@@ -197,8 +197,9 @@ prose:
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
 
-gems:
+plugins:
   - jekyll-paginate
+  - jekyll-sitemap
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
